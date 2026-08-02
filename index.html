@@ -1,0 +1,655 @@
+<title>Бибигуль Шайхиева — бизнес-тренер, мастер-коуч ICU</title>
+<meta name="description" content="Бибигуль Шайхиева — бизнес-тренер, мастер-коуч ICU и эксперт по личному бренду. Корпоративные тренинги, коуч-сессии и программы развития.">
+<style>
+  :root {
+    /* Brand palette — committed identity */
+    --emerald:   #0B3D2E;
+    --emerald-d: #072518;
+    --emerald-dd:#051a11;
+    --milk:      #F8F6F0;
+    --milk-2:    #F1ECE1;
+    --champ:     #C9B488;
+    --champ-l:   #E4D7BC;
+    --champ-d:   #A8906090;
+
+    /* Semantic tokens (light) */
+    --bg:        var(--milk);
+    --bg-soft:   #FBFAF5;
+    --surface:   #FFFFFF;
+    --ink:       #16241D;
+    --ink-soft:  #43514A;
+    --muted:     #7C8079;
+    --line:      #E3DECF;
+    --accent:    var(--emerald);
+    --gold:      #9C7E45;
+    --gold-bg:   var(--champ);
+    --band:      var(--emerald);
+    --band-ink:  #F3EEDF;
+    --band-mut:  #B9C4B7;
+    --card:      #FFFFFF;
+    --card-line: #E8E2D3;
+    --shadow:    0 1px 2px rgba(11,61,46,.05), 0 18px 40px -24px rgba(11,61,46,.22);
+
+    --serif: "Fraunces", "Playfair Display", Georgia, "Times New Roman", serif;
+    --sans:  "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:  "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --maxw: 1160px;
+    --gut: clamp(20px, 5vw, 64px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:        #071E16;
+      --bg-soft:   #0A2519;
+      --surface:   #0E3123;
+      --ink:       #F1EEE3;
+      --ink-soft:  #C4CDBF;
+      --muted:     #8A9A8C;
+      --line:      #1C3A2C;
+      --accent:    var(--champ);
+      --gold:      var(--champ-l);
+      --gold-bg:   var(--champ);
+      --band:      #051a11;
+      --band-ink:  #F3EEDF;
+      --band-mut:  #9FB0A0;
+      --card:      #0D2B1F;
+      --card-line: #1E4030;
+      --shadow:    0 1px 2px rgba(0,0,0,.3), 0 24px 50px -28px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#071E16; --bg-soft:#0A2519; --surface:#0E3123; --ink:#F1EEE3;
+    --ink-soft:#C4CDBF; --muted:#8A9A8C; --line:#1C3A2C; --accent:var(--champ);
+    --gold:var(--champ-l); --gold-bg:var(--champ); --band:#051a11; --band-ink:#F3EEDF;
+    --band-mut:#9FB0A0; --card:#0D2B1F; --card-line:#1E4030;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 24px 50px -28px rgba(0,0,0,.6);
+  }
+  :root[data-theme="light"] {
+    --bg:#F8F6F0; --bg-soft:#FBFAF5; --surface:#FFFFFF; --ink:#16241D;
+    --ink-soft:#43514A; --muted:#7C8079; --line:#E3DECF; --accent:#0B3D2E;
+    --gold:#9C7E45; --gold-bg:#C9B488; --band:#0B3D2E; --band-ink:#F3EEDF;
+    --band-mut:#B9C4B7; --card:#FFFFFF; --card-line:#E8E2D3;
+    --shadow:0 1px 2px rgba(11,61,46,.05), 0 18px 40px -24px rgba(11,61,46,.22);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gut); }
+
+  h1,h2,h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; letter-spacing: -.01em; text-wrap: balance; margin: 0; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 18px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::before { content:""; width: 28px; height: 1px; background: var(--gold-bg); display:inline-block; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; gap: 22px; height: 70px; }
+  .brand { font-family: var(--serif); font-size: 21px; letter-spacing: -.01em; white-space: nowrap; }
+  .brand b { font-weight: 600; }
+  .nav-links { display: flex; gap: 26px; margin-left: auto; }
+  .nav-links a {
+    text-decoration: none; color: var(--ink-soft); font-size: 14.5px;
+    padding: 6px 0; position: relative; transition: color .2s;
+  }
+  .nav-links a::after {
+    content:""; position:absolute; left:0; bottom:0; height:1.5px; width:0;
+    background: var(--gold-bg); transition: width .25s ease;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-tools { display:flex; align-items:center; gap: 10px; }
+  .tel { font-family: var(--mono); font-size: 13.5px; color: var(--ink-soft); text-decoration:none; white-space:nowrap; }
+  .tel:hover { color: var(--ink); }
+
+  .langsw { display:inline-flex; border:1px solid var(--line); border-radius: 999px; overflow:hidden; font-family: var(--mono); font-size: 12px; }
+  .langsw button { border:0; background: transparent; color: var(--muted); padding: 6px 11px; cursor:pointer; letter-spacing:.08em; }
+  .langsw button[aria-pressed="true"] { background: var(--accent); color: var(--milk); }
+  :root[data-theme="dark"] .langsw button[aria-pressed="true"],
+  @media (prefers-color-scheme: dark){ }
+  .iconbtn {
+    border:1px solid var(--line); background: transparent; color: var(--ink-soft);
+    width: 36px; height: 36px; border-radius: 999px; cursor:pointer; display:grid; place-items:center; font-size: 15px;
+  }
+  .iconbtn:hover { color: var(--ink); border-color: var(--gold-bg); }
+  .btn {
+    display:inline-flex; align-items:center; gap:9px; text-decoration:none; cursor:pointer;
+    font-family: var(--sans); font-size: 15px; font-weight: 500;
+    padding: 11px 20px; border-radius: 999px; border: 1px solid transparent; transition: transform .15s, box-shadow .2s, background .2s;
+  }
+  .btn-primary { background: var(--accent); color: var(--milk); }
+  :root[data-theme="dark"] .btn-primary { color: var(--emerald-d); }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -12px var(--accent); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--gold-bg); background: color-mix(in srgb, var(--gold-bg) 12%, transparent); }
+  .btn-sm { padding: 9px 16px; font-size: 14px; }
+  .menu-toggle { display:none; }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; overflow: hidden; padding: clamp(48px, 8vw, 96px) 0 clamp(40px,6vw,72px); }
+  .hero-arc { position:absolute; inset:0; pointer-events:none; z-index:0; opacity:.9; }
+  .hero-grid { position: relative; z-index:1; display:grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 5vw, 64px); align-items:center; }
+  .hero h1 { font-size: clamp(38px, 6.2vw, 74px); }
+  .hero h1 .accent { color: var(--accent); font-style: italic; }
+  .status-line { font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-top: 22px; }
+  .lead { font-size: clamp(17px, 2vw, 19px); color: var(--ink-soft); max-width: 46ch; margin: 20px 0 0; }
+  .badges { display:flex; flex-wrap:wrap; gap: 10px; margin-top: 26px; }
+  .badge {
+    font-family: var(--mono); font-size: 12px; letter-spacing:.04em;
+    padding: 7px 13px; border-radius: 999px; border:1px solid var(--card-line);
+    background: var(--surface); color: var(--ink-soft);
+  }
+  .hero-cta { display:flex; flex-wrap:wrap; gap: 12px; margin-top: 30px; }
+
+  .portrait {
+    position: relative; aspect-ratio: 4/5; border-radius: 8px; overflow:hidden;
+    border: 1px solid var(--card-line); box-shadow: var(--shadow);
+  }
+  .ph {
+    width:100%; height:100%; display:grid; place-items:center; position:relative;
+    background:
+      radial-gradient(120% 90% at 30% 15%, color-mix(in srgb, var(--champ) 42%, transparent), transparent 60%),
+      linear-gradient(160deg, var(--emerald) 0%, var(--emerald-d) 100%);
+    color: var(--champ-l);
+  }
+  .ph .mono { font-family: var(--serif); font-size: clamp(56px, 9vw, 96px); letter-spacing: .04em; color: var(--champ-l); opacity:.92; }
+  .ph .ph-tag { position:absolute; bottom:14px; left:0; right:0; text-align:center; font-family: var(--mono); font-size: 10.5px; letter-spacing:.18em; text-transform:uppercase; color: color-mix(in srgb, var(--champ-l) 70%, transparent); }
+  .ph.small .mono { font-size: clamp(40px, 7vw, 64px); }
+
+  /* ---------- Sections ---------- */
+  section { padding: clamp(56px, 8vw, 104px) 0; }
+  .sec-head { max-width: 62ch; margin-bottom: clamp(32px, 5vw, 52px); }
+  .sec-head h2 { font-size: clamp(28px, 4.4vw, 46px); }
+  .sec-head p { color: var(--ink-soft); margin: 16px 0 0; font-size: 18px; }
+
+  /* About */
+  .about-grid { display:grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px,5vw,64px); align-items:start; }
+  .about-body p { margin: 0 0 18px; color: var(--ink-soft); }
+  .about-body p:first-child { color: var(--ink); font-size: 20px; font-family: var(--serif); line-height:1.4; }
+  .about-meta { display:grid; gap: 2px; margin-top: 8px; border-top:1px solid var(--line); padding-top: 22px; }
+  .about-meta .row { display:flex; justify-content:space-between; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .about-meta .k { font-family: var(--mono); font-size: 12px; letter-spacing:.08em; text-transform:uppercase; color: var(--muted); }
+  .about-meta .v { text-align:right; color: var(--ink); font-size: 15px; }
+
+  /* Services */
+  .cols3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card {
+    background: var(--card); border:1px solid var(--card-line); border-radius: 10px;
+    padding: 30px 26px; box-shadow: var(--shadow); height:100%;
+  }
+  .card h3 { font-size: 22px; margin-bottom: 16px; }
+  .card .num { font-family: var(--mono); font-size: 12px; color: var(--gold); letter-spacing:.12em; display:block; margin-bottom: 14px; }
+  .lst { list-style:none; margin:0; padding:0; display:grid; gap: 12px; }
+  .lst li { position:relative; padding-left: 22px; color: var(--ink-soft); font-size: 15.5px; }
+  .lst li::before { content:""; position:absolute; left:0; top:9px; width:8px; height:8px; border:1.5px solid var(--gold-bg); border-radius:2px; transform: rotate(45deg); }
+
+  /* Projects */
+  .cards-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .proj {
+    background: var(--card); border:1px solid var(--card-line); border-radius: 10px; padding: 26px 24px;
+    display:flex; flex-direction:column; gap: 10px; transition: transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .proj:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--gold-bg); }
+  .proj .tag { font-family: var(--mono); font-size: 11px; letter-spacing:.14em; text-transform:uppercase; color: var(--gold); }
+  .proj h3 { font-size: 20px; }
+  .proj p { margin:0; color: var(--ink-soft); font-size: 15px; }
+
+  /* Trust */
+  #trust { background: var(--bg-soft); }
+  .trust-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line); border:1px solid var(--line); border-radius: 10px; overflow:hidden; }
+  .trust-cell { background: var(--bg); padding: 30px 26px; min-height: 128px; display:flex; flex-direction:column; justify-content:center; gap:6px; }
+  .trust-cell .name { font-family: var(--serif); font-size: 21px; color: var(--ink); }
+  .trust-cell .desc { font-size: 13.5px; color: var(--muted); }
+
+  /* Gallery */
+  .gallery { display:grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .gallery .portrait { aspect-ratio: 16/10; }
+
+  /* Stats band */
+  .stats { background: var(--band); color: var(--band-ink); }
+  .stats-grid { display:grid; grid-template-columns: repeat(4,1fr); gap: clamp(20px,4vw,40px); }
+  .stat { text-align:center; }
+  .stat .n { font-family: var(--serif); font-size: clamp(40px, 6vw, 64px); color: var(--champ); line-height:1; font-variant-numeric: tabular-nums; }
+  .stat .l { font-family: var(--mono); font-size: 12.5px; letter-spacing:.08em; text-transform:uppercase; color: var(--band-mut); margin-top: 12px; }
+
+  /* Contact */
+  .contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,5vw,56px); align-items:start; }
+  .contact-list { display:grid; gap: 4px; }
+  .clink {
+    display:flex; align-items:center; gap: 16px; text-decoration:none; color: var(--ink);
+    padding: 18px 4px; border-bottom: 1px solid var(--line); transition: padding .2s, color .2s;
+  }
+  .clink:hover { padding-left: 12px; color: var(--accent); }
+  .clink .ico { width: 40px; height:40px; border-radius: 999px; border:1px solid var(--card-line); display:grid; place-items:center; flex:none; font-size: 16px; color: var(--gold); }
+  .clink .k { font-family: var(--mono); font-size: 11px; letter-spacing:.12em; text-transform:uppercase; color: var(--muted); }
+  .clink .v { font-size: 17px; }
+  .contact-card { background: var(--band); color: var(--band-ink); border-radius: 12px; padding: clamp(28px,4vw,44px); }
+  .contact-card h3 { color: var(--champ-l); font-size: 28px; margin-bottom: 14px; }
+  .contact-card p { color: var(--band-mut); margin: 0 0 26px; }
+  .contact-card .btn-primary { background: var(--champ); color: var(--emerald-d); }
+  .contact-card .btn-primary:hover { box-shadow: 0 12px 26px -12px rgba(0,0,0,.5); }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--line); padding: 40px 0; }
+  .foot { display:flex; flex-wrap:wrap; gap: 14px; align-items:center; justify-content:space-between; }
+  .foot .c { font-family: var(--mono); font-size: 12.5px; color: var(--muted); letter-spacing:.03em; }
+  .foot .s { font-size: 14px; color: var(--ink-soft); }
+
+  /* Reveal */
+  .reveal { opacity:0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity:1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .cols3, .cards-grid, .trust-grid { grid-template-columns: repeat(2,1fr); }
+    .stats-grid { grid-template-columns: repeat(2,1fr); row-gap: 34px; }
+  }
+  @media (max-width: 860px) {
+    .nav-links, .tel { display: none; }
+    .menu-toggle { display: grid; }
+    .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero .portrait { max-width: 380px; margin-inline:auto; }
+    .gallery { grid-template-columns: 1fr; }
+    .mobile-menu.open { display:flex; }
+  }
+  @media (max-width: 560px) {
+    .cols3, .cards-grid, .trust-grid, .gallery { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    body { font-size: 16px; }
+  }
+
+  .mobile-menu {
+    display:none; position: fixed; inset: 70px 0 0; z-index: 49;
+    background: var(--bg); flex-direction:column; padding: 24px var(--gut); gap: 4px;
+    border-top: 1px solid var(--line);
+  }
+  .mobile-menu a { text-decoration:none; color: var(--ink); font-family: var(--serif); font-size: 26px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .skip { position:absolute; left:-999px; }
+  .skip:focus { left: 12px; top: 12px; background: var(--accent); color: var(--milk); padding: 8px 14px; border-radius: 6px; z-index: 100; }
+  :focus-visible { outline: 2px solid var(--gold-bg); outline-offset: 3px; border-radius: 4px; }
+</style>
+
+<a href="#about" class="skip" data-t="skip">Перейти к содержанию</a>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><b>Бибигуль</b> Шайхиева</div>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#about"        data-t="nav_about">Обо мне</a>
+      <a href="#services"     data-t="nav_services">Услуги</a>
+      <a href="#projects"     data-t="nav_projects">Проекты</a>
+      <a href="#trust"        data-t="nav_trust">Мне доверяют</a>
+      <a href="#contact"      data-t="nav_contact">Контакты</a>
+    </nav>
+    <div class="nav-tools">
+      <a class="tel" href="tel:+70000000000">+7 (___) ___-__-__</a>
+      <div class="langsw" role="group" aria-label="Язык / Тіл">
+        <button data-lang="ru" aria-pressed="true">RU</button>
+        <button data-lang="kk" aria-pressed="false">KK</button>
+      </div>
+      <button class="iconbtn" id="theme" aria-label="Сменить тему" title="Тема">◐</button>
+      <a href="#contact" class="btn btn-primary btn-sm" data-t="write">Написать</a>
+      <button class="iconbtn menu-toggle" id="burger" aria-label="Меню" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+  <a href="#about"    data-t="nav_about">Обо мне</a>
+  <a href="#services" data-t="nav_services">Услуги</a>
+  <a href="#projects" data-t="nav_projects">Проекты</a>
+  <a href="#trust"    data-t="nav_trust">Мне доверяют</a>
+  <a href="#contact"  data-t="nav_contact">Контакты</a>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="hero-arc" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path id="arc" d="M-40 660 C 320 640, 520 520, 700 360 S 1060 60, 1260 -40"
+            fill="none" stroke="var(--champ)" stroke-width="1.5" stroke-opacity=".55"/>
+      <circle cx="700" cy="360" r="4" fill="var(--champ)"/>
+      <circle cx="960" cy="150" r="3" fill="var(--champ)" opacity=".7"/>
+    </svg>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow" data-t="hero_eyebrow">Бизнес-тренер · Мастер-коуч ICU</p>
+        <h1 data-t="hero_h1">Помогаю людям и компаниям <span class="accent" data-t="hero_h1_accent">расти осознанно</span></h1>
+        <p class="status-line" data-t="hero_status">Эксперт по личному бренду · г. Актау, Казахстан</p>
+        <p class="lead" data-t="hero_lead">Корпоративные тренинги, индивидуальные коуч-сессии и авторские программы развития. Более 10 лет практики и 5000+ участников.</p>
+        <div class="badges">
+          <span class="badge" data-t="badge1">Мастер-коуч ICU</span>
+          <span class="badge" data-t="badge2">Личный бренд</span>
+          <span class="badge" data-t="badge3">Корпоративное обучение</span>
+          <span class="badge" data-t="badge4">Публичные выступления</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary" data-t="cta_book">Записаться на консультацию</a>
+          <a href="#projects" class="btn btn-ghost" data-t="cta_proj">Смотреть проекты</a>
+        </div>
+      </div>
+      <div class="portrait reveal">
+        <div class="ph"><span class="mono">БШ</span><span class="ph-tag" data-t="ph_hero">Фото · Бибигуль Шайхиева</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="portrait reveal">
+        <div class="ph"><span class="mono">БШ</span><span class="ph-tag" data-t="ph_about">Фото с выступления</span></div>
+      </div>
+      <div>
+        <p class="eyebrow" data-t="about_eyebrow">Обо мне</p>
+        <div class="about-body reveal">
+          <p data-t="about_p1">Я Бибигуль Шайхиева — бизнес-тренер, мастер-коуч ICU и эксперт по личному бренду. Более десяти лет помогаю руководителям, командам и предпринимателям находить опору, ясность и энергию для роста.</p>
+          <p data-t="about_p2">В моей практике — корпоративные тренинги, стратегические сессии и индивидуальный коучинг. Я соединяю международные методики с глубоким пониманием местного контекста, поэтому решения получаются не «книжными», а работающими здесь и сейчас.</p>
+          <p data-t="about_p3">Верю, что настоящий рост начинается с осознанности. Моя задача — создать пространство, в котором человек видит свои сильные стороны и делает следующий уверенный шаг в своей жизни и деле.</p>
+        </div>
+        <div class="about-meta reveal">
+          <div class="row"><span class="k" data-t="m_edu">Образование</span><span class="v" data-t="m_edu_v">Магистратура · развитие и управление</span></div>
+          <div class="row"><span class="k" data-t="m_cert">Квалификация</span><span class="v" data-t="m_cert_v">Мастер-коуч ICU</span></div>
+          <div class="row"><span class="k" data-t="m_exp">Опыт</span><span class="v" data-t="m_exp_v">10+ лет · 100+ тренингов</span></div>
+          <div class="row"><span class="k" data-t="m_geo">География</span><span class="v" data-t="m_geo_v">Казахстан · международные проекты</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow" data-t="serv_eyebrow">Услуги</p>
+        <h2 data-t="serv_h2">Чем я буду полезна</h2>
+        <p data-t="serv_sub">Форматы работы — для компаний и для частных клиентов, от разовых сессий до комплексных программ развития.</p>
+      </div>
+      <div class="cols3">
+        <div class="card reveal">
+          <span class="num">01</span>
+          <h3 data-t="s1_h">Чем буду полезна</h3>
+          <ul class="lst">
+            <li data-t="s1_1">Корпоративные бизнес-тренинги под задачи команды</li>
+            <li data-t="s1_2">Индивидуальный и командный коучинг</li>
+            <li data-t="s1_3">Развитие личного бренда и публичных выступлений</li>
+            <li data-t="s1_4">Стратегические и фасилитационные сессии</li>
+            <li data-t="s1_5">Программы развития руководителей</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <span class="num">02</span>
+          <h3 data-t="s2_h">Ключевые компетенции</h3>
+          <ul class="lst">
+            <li data-t="s2_1">Коучинг по стандартам ICU (мастер-уровень)</li>
+            <li data-t="s2_2">Дизайн и проведение обучающих программ</li>
+            <li data-t="s2_3">Работа с мотивацией и лидерским потенциалом</li>
+            <li data-t="s2_4">Личный бренд и коммуникации</li>
+            <li data-t="s2_5">Модерация деловых событий</li>
+          </ul>
+        </div>
+        <div class="card reveal" id="achievements">
+          <span class="num">03</span>
+          <h3 data-t="s3_h">Достижения</h3>
+          <ul class="lst">
+            <li data-t="s3_1">5000+ участников тренингов и сессий</li>
+            <li data-t="s3_2">100+ проведённых обучающих программ</li>
+            <li data-t="s3_3">7+ лет международного опыта</li>
+            <li data-t="s3_4">Спикер панельной сессии Digital Bridge 2025</li>
+            <li data-t="s3_5">Автор продукта «Zhana omirine kadam zhasa»</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow" data-t="proj_eyebrow">Проекты</p>
+        <h2 data-t="proj_h2">Избранные проекты и программы</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="proj reveal"><span class="tag" data-t="pj1_t">Коучинг</span><h3 data-t="pj1_h">ICU Ақтау</h3><p data-t="pj1_p">Развитие коучинговой культуры и сообщества коучей в регионе.</p></div>
+        <div class="proj reveal"><span class="tag" data-t="pj2_t">Академия</span><h3 data-t="pj2_h">Jarkyra Business Academy</h3><p data-t="pj2_p">Образовательные программы для предпринимателей и руководителей.</p></div>
+        <div class="proj reveal"><span class="tag" data-t="pj3_t">События</span><h3 data-t="pj3_h">Mangystau Business Talks</h3><p data-t="pj3_p">Деловые встречи и дискуссии для бизнес-сообщества региона.</p></div>
+        <div class="proj reveal"><span class="tag" data-t="pj4_t">Обучение</span><h3 data-t="pj4_h">Образовательные программы</h3><p data-t="pj4_p">Авторские курсы по лидерству, коммуникациям и личному бренду.</p></div>
+        <div class="proj reveal"><span class="tag" data-t="pj5_t">Сообщество</span><h3 data-t="pj5_h">TechnoWomen</h3><p data-t="pj5_p">Участие и поддержка женского профессионального сообщества.</p></div>
+        <div class="proj reveal"><span class="tag" data-t="pj6_t">Ивенты</span><h3 data-t="pj6_h">Деловые события</h3><p data-t="pj6_p">Модерация и выступления на конференциях и форумах.</p></div>
+        <div class="proj reveal"><span class="tag" data-t="pj7_t">Практика</span><h3 data-t="pj7_h">Коуч-сессии</h3><p data-t="pj7_p">Индивидуальная работа с клиентами: цели, опоры, решения.</p></div>
+        <div class="proj reveal"><span class="tag" data-t="pj8_t">Продукт</span><h3 data-t="pj8_h">«Zhana omirine kadam zhasa»</h3><p data-t="pj8_p">Авторский блокнот-практика для шага к новой жизни.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section id="trust">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow" data-t="trust_eyebrow">Мне доверяют</p>
+        <h2 data-t="trust_h2">Компании и партнёры</h2>
+      </div>
+      <div class="trust-grid reveal">
+        <div class="trust-cell"><span class="name">Rixos Water World</span><span class="desc" data-t="tc1">Гостеприимство и сервис</span></div>
+        <div class="trust-cell"><span class="name">Caspian Riviera Aktau</span><span class="desc" data-t="tc2">Отель и деловой центр</span></div>
+        <div class="trust-cell"><span class="name" data-t="tc3n">Фонд «Даму»</span><span class="desc" data-t="tc3">Поддержка предпринимательства</span></div>
+        <div class="trust-cell"><span class="name">TechnoWomen</span><span class="desc" data-t="tc4">Профессиональное сообщество</span></div>
+        <div class="trust-cell"><span class="name" data-t="tc5n">НПП «Атамекен»</span><span class="desc" data-t="tc5">Национальная палата предпринимателей</span></div>
+        <div class="trust-cell"><span class="name">Tortay Engineering</span><span class="desc" data-t="tc6">Инжиниринг и производство</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow" data-t="gal_eyebrow">Галерея</p>
+        <h2 data-t="gal_h2">Панельная сессия · Digital Bridge 2025</h2>
+      </div>
+      <div class="gallery">
+        <div class="portrait reveal"><div class="ph small"><span class="mono">DB</span><span class="ph-tag" data-t="gal1">Фото · Digital Bridge 2025</span></div></div>
+        <div class="portrait reveal"><div class="ph small"><span class="mono">DB</span><span class="ph-tag" data-t="gal2">Фото · панельная сессия</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat reveal"><div class="n">10+</div><div class="l" data-t="st1">лет опыта</div></div>
+        <div class="stat reveal"><div class="n">100+</div><div class="l" data-t="st2">тренингов</div></div>
+        <div class="stat reveal"><div class="n">7+</div><div class="l" data-t="st3">лет международного опыта</div></div>
+        <div class="stat reveal"><div class="n">5000+</div><div class="l" data-t="st4">участников</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow" data-t="con_eyebrow">Контакты</p>
+        <h2 class="sec-head" style="margin-bottom:22px" data-t="con_h2">Давайте поговорим о вашей задаче</h2>
+        <div class="contact-list reveal">
+          <a class="clink" href="tel:+70000000000">
+            <span class="ico">✆</span><span><span class="k" data-t="con_tel">Телефон</span><br><span class="v">+7 (___) ___-__-__</span></span>
+          </a>
+          <a class="clink" href="mailto:bibigultrener@gmail.com">
+            <span class="ico">✉</span><span><span class="k">E-mail</span><br><span class="v">bibigultrener@gmail.com</span></span>
+          </a>
+          <a class="clink" href="https://instagram.com/" target="_blank" rel="noopener">
+            <span class="ico">◎</span><span><span class="k">Instagram</span><br><span class="v">@username</span></span>
+          </a>
+          <a class="clink" href="https://youtube.com/" target="_blank" rel="noopener">
+            <span class="ico">▶</span><span><span class="k">YouTube</span><br><span class="v" data-t="con_yt">Канал на YouTube</span></span>
+          </a>
+          <a class="clink" href="#">
+            <span class="ico">⌖</span><span><span class="k" data-t="con_loc">Локация</span><br><span class="v" data-t="con_loc_v">г. Актау, Казахстан</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-card reveal">
+        <h3 data-t="cc_h">Готовы начать?</h3>
+        <p data-t="cc_p">Напишите мне — обсудим формат работы, цели и как я могу быть полезна вам или вашей команде.</p>
+        <a href="mailto:bibigultrener@gmail.com" class="btn btn-primary" data-t="cc_btn">Написать письмо</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="c">© <span id="year"></span> Бибигуль Шайхиева</span>
+    <span class="s" data-t="foot_s">Бизнес-тренер · Мастер-коуч ICU · Эксперт по личному бренду</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var root = document.documentElement;
+
+  /* Year */
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* Theme */
+  var themeBtn = document.getElementById("theme");
+  themeBtn.addEventListener("click", function () {
+    var cur = root.getAttribute("data-theme");
+    var dark = cur ? cur === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.setAttribute("data-theme", dark ? "light" : "dark");
+  });
+
+  /* Mobile menu */
+  var burger = document.getElementById("burger");
+  var menu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", function () {
+    var open = menu.classList.toggle("open");
+    burger.setAttribute("aria-expanded", String(open));
+    burger.textContent = open ? "✕" : "☰";
+  });
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      menu.classList.remove("open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.textContent = "☰";
+    });
+  });
+
+  /* Reveal on scroll */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+  /* ---- Bilingual RU / KK ---- */
+  var KK = {
+    skip:"Мазмұнға өту",
+    nav_about:"Мен туралы", nav_services:"Қызметтер", nav_projects:"Жобалар",
+    nav_trust:"Маған сенеді", nav_contact:"Байланыс", write:"Жазу",
+    hero_eyebrow:"Бизнес-тренер · ICU мастер-коучы",
+    hero_h1:"Адамдар мен компанияларға", hero_h1_accent:"саналы дамуға көмектесемін",
+    hero_status:"Жеке бренд бойынша сарапшы · Ақтау қ., Қазақстан",
+    hero_lead:"Корпоративтік тренингтер, жеке коуч-сессиялар және авторлық даму бағдарламалары. 10 жылдан астам тәжірибе және 5000+ қатысушы.",
+    badge1:"ICU мастер-коучы", badge2:"Жеке бренд", badge3:"Корпоративтік оқыту", badge4:"Көпшілік алдында сөйлеу",
+    cta_book:"Кеңеске жазылу", cta_proj:"Жобаларды көру",
+    ph_hero:"Фото · Бибигүл Шайхиева", ph_about:"Сөз сөйлеуден фото",
+    about_eyebrow:"Мен туралы",
+    about_p1:"Мен — Бибигүл Шайхиева, бизнес-тренер, ICU мастер-коучы және жеке бренд бойынша сарапшымын. Он жылдан астам басшыларға, командаларға және кәсіпкерлерге тірек, айқындық пен даму қуатын табуға көмектесемін.",
+    about_p2:"Тәжірибемде — корпоративтік тренингтер, стратегиялық сессиялар және жеке коучинг. Халықаралық әдістемелерді жергілікті контекстпен ұштастырамын, сондықтан шешімдер «кітаптық» емес, нақты жұмыс істейтін болады.",
+    about_p3:"Нағыз даму саналылықтан басталады деп сенемін. Менің міндетім — адам өз күшті жақтарын көріп, өмірі мен ісінде келесі сенімді қадам жасайтын кеңістік құру.",
+    m_edu:"Білім", m_edu_v:"Магистратура · даму және басқару",
+    m_cert:"Біліктілік", m_cert_v:"ICU мастер-коучы",
+    m_exp:"Тәжірибе", m_exp_v:"10+ жыл · 100+ тренинг",
+    m_geo:"География", m_geo_v:"Қазақстан · халықаралық жобалар",
+    serv_eyebrow:"Қызметтер", serv_h2:"Немен пайдалы боламын",
+    serv_sub:"Жұмыс форматтары — компаниялар мен жеке клиенттерге, бір реттік сессиядан кешенді бағдарламаларға дейін.",
+    s1_h:"Немен пайдалы боламын",
+    s1_1:"Команда міндеттеріне сай корпоративтік тренингтер", s1_2:"Жеке және командалық коучинг",
+    s1_3:"Жеке бренд пен көпшілік алдында сөйлеуді дамыту", s1_4:"Стратегиялық және фасилитациялық сессиялар",
+    s1_5:"Басшыларды дамыту бағдарламалары",
+    s2_h:"Негізгі құзыреттер",
+    s2_1:"ICU стандарттары бойынша коучинг (мастер деңгей)", s2_2:"Оқыту бағдарламаларын құрастыру және өткізу",
+    s2_3:"Мотивация және көшбасшылық әлеуетімен жұмыс", s2_4:"Жеке бренд және коммуникация", s2_5:"Іскерлік іс-шараларды модерациялау",
+    s3_h:"Жетістіктер",
+    s3_1:"5000+ тренинг пен сессия қатысушысы", s3_2:"100+ өткізілген оқыту бағдарламасы",
+    s3_3:"7+ жыл халықаралық тәжірибе", s3_4:"Digital Bridge 2025 панельдік сессиясының спикері",
+    s3_5:"«Zhana omirine kadam zhasa» өнімінің авторы",
+    proj_eyebrow:"Жобалар", proj_h2:"Таңдаулы жобалар мен бағдарламалар",
+    pj1_t:"Коучинг", pj1_p:"Өңірде коучинг мәдениеті мен коучтар қоғамдастығын дамыту.",
+    pj2_t:"Академия", pj2_p:"Кәсіпкерлер мен басшыларға арналған білім бағдарламалары.",
+    pj3_t:"Іс-шаралар", pj3_p:"Өңір бизнес-қоғамдастығына арналған іскерлік кездесулер мен пікірталастар.",
+    pj4_t:"Оқыту", pj4_h:"Білім беру бағдарламалары", pj4_p:"Көшбасшылық, коммуникация және жеке бренд бойынша авторлық курстар.",
+    pj5_t:"Қоғамдастық", pj5_p:"Әйелдер кәсіби қоғамдастығын қолдау және оған қатысу.",
+    pj6_t:"Ивенттер", pj6_h:"Іскерлік іс-шаралар", pj6_p:"Конференциялар мен форумдарда модерация және сөз сөйлеу.",
+    pj7_t:"Тәжірибе", pj7_h:"Коуч-сессиялар", pj7_p:"Клиенттермен жеке жұмыс: мақсат, тірек, шешім.",
+    pj8_t:"Өнім", pj8_p:"Жаңа өмірге қадам жасауға арналған авторлық блокнот-практика.",
+    trust_eyebrow:"Маған сенеді", trust_h2:"Компаниялар мен серіктестер",
+    tc1:"Қонақжайлылық және сервис", tc2:"Қонақүй және іскерлік орталық",
+    tc3n:"«Даму» қоры", tc3:"Кәсіпкерлікті қолдау",
+    tc4:"Кәсіби қоғамдастық", tc5n:"«Атамекен» ҰКП", tc5:"Кәсіпкерлердің ұлттық палатасы",
+    tc6:"Инжиниринг және өндіріс",
+    gal_eyebrow:"Галерея", gal_h2:"Панельдік сессия · Digital Bridge 2025",
+    gal1:"Фото · Digital Bridge 2025", gal2:"Фото · панельдік сессия",
+    st1:"жыл тәжірибе", st2:"тренинг", st3:"жыл халықаралық тәжірибе", st4:"қатысушы",
+    con_eyebrow:"Байланыс", con_h2:"Міндетіңіз туралы сөйлесейік",
+    con_tel:"Телефон", con_yt:"YouTube арнасы", con_loc:"Орналасу", con_loc_v:"Ақтау қ., Қазақстан",
+    cc_h:"Бастауға дайынсыз ба?", cc_p:"Маған жазыңыз — жұмыс форматын, мақсаттарды және сізге немесе командаңызға қалай пайдалы бола алатынымды талқылаймыз.",
+    cc_btn:"Хат жазу",
+    foot_s:"Бизнес-тренер · ICU мастер-коучы · Жеке бренд сарапшысы"
+  };
+
+  var RU = {};
+  document.querySelectorAll("[data-t]").forEach(function (el) {
+    RU[el.getAttribute("data-t")] = el.innerHTML;
+  });
+
+  function setLang(lang) {
+    var dict = lang === "kk" ? KK : RU;
+    document.querySelectorAll("[data-t]").forEach(function (el) {
+      var k = el.getAttribute("data-t");
+      if (dict[k] != null) el.innerHTML = dict[k];
+    });
+    root.setAttribute("lang", lang);
+    document.querySelectorAll(".langsw button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+    });
+  }
+  document.querySelectorAll(".langsw button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  });
+})();
+</script>
