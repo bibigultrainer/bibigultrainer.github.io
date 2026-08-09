@@ -1,0 +1,123 @@
+<title>Бибигуль Шайхиева — все ссылки</title>
+<meta name="description" content="Бибигуль Шайхиева — бизнес-тренер, мастер-коуч ICU. Сайт, WhatsApp, Instagram, YouTube и контакты в одном месте.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --emerald:#0B3D2E; --emerald-d:#072518; --milk:#F8F6F0; --champ:#C9B488; --champ-l:#E4D7BC;
+    --bg:var(--milk); --surface:#FFFFFF; --ink:#16241D; --ink-soft:#43514A; --muted:#7C8079;
+    --line:#E3DECF; --accent:#0B3D2E; --gold:#9C7E45;
+    --serif:"Fraunces","Playfair Display",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#071E16; --surface:#0D2B1F; --ink:#F1EEE3; --ink-soft:#C4CDBF; --muted:#8A9A8C;
+      --line:#1E4030; --accent:var(--champ); --gold:var(--champ-l); }
+  }
+  :root[data-theme="dark"]{ --bg:#071E16; --surface:#0D2B1F; --ink:#F1EEE3; --ink-soft:#C4CDBF;
+    --muted:#8A9A8C; --line:#1E4030; --accent:var(--champ); --gold:var(--champ-l); }
+  :root[data-theme="light"]{ --bg:#F8F6F0; --surface:#FFFFFF; --ink:#16241D; --ink-soft:#43514A;
+    --muted:#7C8079; --line:#E3DECF; --accent:#0B3D2E; --gold:#9C7E45; }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; min-height:100vh; font-family:var(--sans); color:var(--ink);
+    background:
+      radial-gradient(120% 60% at 50% -10%, color-mix(in srgb,var(--champ) 26%, transparent), transparent 60%),
+      var(--bg);
+    display:flex; flex-direction:column; align-items:center;
+    padding:44px 20px 40px; -webkit-font-smoothing:antialiased;
+  }
+  .theme{ position:absolute; top:16px; right:16px; width:38px; height:38px; border-radius:999px;
+    border:1px solid var(--line); background:transparent; color:var(--ink-soft); cursor:pointer; font-size:16px; }
+  .card{ width:100%; max-width:440px; display:flex; flex-direction:column; align-items:center; }
+
+  .avatar{ width:104px; height:104px; border-radius:999px; display:grid; place-items:center;
+    background:linear-gradient(160deg,var(--emerald),var(--emerald-d));
+    color:var(--champ-l); font-family:var(--serif); font-size:42px; letter-spacing:.03em;
+    box-shadow:0 18px 40px -20px rgba(11,61,46,.5); border:2px solid color-mix(in srgb,var(--champ) 50%, transparent); }
+  h1{ font-family:var(--serif); font-weight:500; font-size:27px; margin:20px 0 6px; text-align:center; letter-spacing:-.01em; }
+  .role{ font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); text-align:center; }
+  .bio{ color:var(--ink-soft); text-align:center; font-size:15px; margin:16px 0 30px; max-width:34ch; line-height:1.55; }
+
+  .links{ width:100%; display:flex; flex-direction:column; gap:12px; }
+  .lnk{ display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--ink);
+    background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:15px 18px;
+    transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease; }
+  .lnk:hover{ transform:translateY(-2px); border-color:color-mix(in srgb,var(--champ) 70%, transparent);
+    box-shadow:0 14px 30px -18px rgba(11,61,46,.35); }
+  .lnk .ic{ width:40px; height:40px; flex:none; border-radius:10px; display:grid; place-items:center;
+    background:color-mix(in srgb,var(--champ) 22%, transparent); color:var(--accent); font-size:18px; }
+  .lnk .tx{ display:flex; flex-direction:column; line-height:1.25; }
+  .lnk .tt{ font-weight:600; font-size:15.5px; }
+  .lnk .ss{ font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:.03em; margin-top:2px; }
+  .lnk .ar{ margin-left:auto; color:var(--muted); font-size:16px; }
+  .lnk.primary{ background:var(--accent); border-color:transparent; color:var(--milk); }
+  :root[data-theme="dark"] .lnk.primary{ color:var(--emerald-d); }
+  @media (prefers-color-scheme: dark){ .lnk.primary{ color:var(--emerald-d); } }
+  .lnk.primary .ic{ background:color-mix(in srgb,#000 18%, transparent); color:var(--champ-l); }
+  .lnk.primary .ss{ color:color-mix(in srgb, currentColor 65%, transparent); }
+  .lnk.primary .ar{ color:currentColor; opacity:.8; }
+
+  .foot{ margin-top:34px; font-family:var(--mono); font-size:11px; letter-spacing:.05em; color:var(--muted); text-align:center; }
+  a:focus-visible,button:focus-visible{ outline:2px solid var(--champ); outline-offset:3px; }
+</style>
+
+<button class="theme" id="theme" aria-label="Сменить тему">◐</button>
+
+<div class="card">
+  <div class="avatar">БШ</div>
+  <h1>Бибигуль Шайхиева</h1>
+  <div class="role">Бизнес-тренер · Мастер-коуч ICU</div>
+  <p class="bio">Корпоративные тренинги, коуч-сессии и программы развития. Выберите, как связаться 👇</p>
+
+  <div class="links">
+    <a class="lnk primary" href="https://bibigultrainer.github.io" target="_blank" rel="noopener">
+      <span class="ic">✦</span>
+      <span class="tx"><span class="tt">Мой сайт</span><span class="ss">Услуги · проекты · отзывы</span></span>
+      <span class="ar">→</span>
+    </a>
+
+    <a class="lnk" href="https://wa.me/70000000000" target="_blank" rel="noopener">
+      <span class="ic">✆</span>
+      <span class="tx"><span class="tt">WhatsApp</span><span class="ss">Написать в мессенджере</span></span>
+      <span class="ar">→</span>
+    </a>
+
+    <a class="lnk" href="tel:+70000000000">
+      <span class="ic">☎</span>
+      <span class="tx"><span class="tt">Позвонить</span><span class="ss">+7 (___) ___-__-__</span></span>
+      <span class="ar">→</span>
+    </a>
+
+    <a class="lnk" href="https://instagram.com/" target="_blank" rel="noopener">
+      <span class="ic">◎</span>
+      <span class="tx"><span class="tt">Instagram</span><span class="ss">@username</span></span>
+      <span class="ar">→</span>
+    </a>
+
+    <a class="lnk" href="https://youtube.com/" target="_blank" rel="noopener">
+      <span class="ic">▶</span>
+      <span class="tx"><span class="tt">YouTube</span><span class="ss">Мой канал</span></span>
+      <span class="ar">→</span>
+    </a>
+
+    <a class="lnk" href="mailto:bibigultrener@gmail.com">
+      <span class="ic">✉</span>
+      <span class="tx"><span class="tt">E-mail</span><span class="ss">bibigultrener@gmail.com</span></span>
+      <span class="ar">→</span>
+    </a>
+  </div>
+
+  <div class="foot">г. Актау, Казахстан · © <span id="y"></span></div>
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+  var root = document.documentElement;
+  document.getElementById("theme").addEventListener("click", function(){
+    var cur = root.getAttribute("data-theme");
+    var dark = cur ? cur === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.setAttribute("data-theme", dark ? "light" : "dark");
+  });
+</script>
